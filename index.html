@@ -5,23 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhamad Alfian Widjaya</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="portofolio.css" />
   </head>
   <body>
-    <!--Navbar-->
-    <header>
-      <nav>
-        <div class="logo">Yan</div>
-        <ul>
-          <li><a href="#1">Home</a></li>
-          <li><a href="#2">Portofolio</a></li>
-          <li><a href="#3">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!--Home-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <!-- Navbar -->
+      <div class="container">
+        <h1 class="navbar-brand d-inline fs-4">Yan</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 text-white"
+                aria-current="page"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-white" href="#portofolio"
+                >Portofolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-white" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
-      <div class="home" id="1">
+      <!-- navbar end -->
+      <!-- home -->
+      <div class="home" id="home">
         <img
           src="foto/FOTO ALFIAN.jpg"
           alt="Muhamad Alfian Widjaya"
@@ -62,11 +99,13 @@
           </div>
         </article>
       </div>
-      <!--Education & Skills-->
-      <article>
-        <div class="education">
+      <!-- home end -->
+
+      <!-- Education & Skills -->
+      <div class="container education-skills">
+        <div class="education row">
           <h1>Education</h1>
-          <div class="education-warp">
+          <div class="education-warp d-flex flex-wrap justify-content-around">
             <div class="kuliah">
               <img src="foto/education.png" alt="kuliah" />
               <p>
@@ -80,9 +119,9 @@
           </div>
         </div>
 
-        <div class="skills">
+        <div class="skills row">
           <h1>Skills</h1>
-          <div class="skills-warp">
+          <div class="skills-warp d-flex flex-wrap justify-content-around">
             <div class="card-skills">
               <p>Html - Intermediated</p>
               <br />
@@ -101,110 +140,160 @@
             </div>
           </div>
         </div>
-      </article>
-      <!--Portofolio-->
-      <article>
-        <div class="portofolio" id="2">
-          <h1>Portofolio</h1>
-          <div class="content">
-            <div class="coloumn">
-              <div class="card">
-                <a
-                  href="https://alfianw.github.io/bandarplastikindonesia.github.io/"
-                  target="_blank"
-                  ><img src="foto/bandarplastikindonesia.png" alt="project1"
-                /></a>
-                <p>BANDAR PLASTIK INDONESIA</p>
-              </div>
+      </div>
+      <!-- Education & Skills end -->
+
+      <!-- Portofolio -->
+      <div class="containe" id="portofolio">
+        <h1 class="text-center">Portofolio</h1>
+        <div
+          class="container d-flex flex-wrap justify-content-around"
+          id="portofolio"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="foto/bandarplastikindonesia.png"
+              class="card-img-top"
+              alt="Bandar Plastik Indonesia"
+            />
+            <div class="card-body">
+              <h5 class="card-title">BANDAR PLASTIK INDONESIA</h5>
+              <p class="card-text">
+                Create and design a company profile website for the company
+                Bandar Plastik Indonesia
+              </p>
+              <a
+                href="https://alfianw.github.io/bandarplastikindonesia.github.io/"
+                class="btn btn-primary"
+                target="_blank"
+                >SEE WEBSITE</a
+              >
             </div>
-            <div class="coloumn">
-              <div class="card">
-                <a href=""><img src="foto/comingsoon.jpg" alt="project2" /></a>
-                <p>Project 2</p>
-              </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img src="foto/comingsoon.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Comming soon</h5>
+              <p class="card-text">Available soon.</p>
+              <a href="#" class="btn btn-primary disabled" target="_blank"
+                >SEE WEBSITE</a
+              >
             </div>
-            <div class="coloumn">
-              <div class="card">
-                <a href=""><img src="foto/comingsoon.jpg" alt="project3" /></a>
-                <p>Project 3</p>
-              </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img src="foto/comingsoon.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Comming soon</h5>
+              <p class="card-text">Available soon.</p>
+              <a href="#" class="btn btn-primary disabled" target="_blank"
+                >SEE WEBSITE</a
+              >
             </div>
-            <div class="coloumn">
-              <div class="card">
-                <a href=""><img src="foto/comingsoon.jpg" alt="project4" /></a>
-                <p>Project 4</p>
-              </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img src="foto/comingsoon.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Comming soon</h5>
+              <p class="card-text">Available soon.</p>
+              <a href="#" class="btn btn-primary disabled" target="_blank"
+                >SEE WEBSITE</a
+              >
             </div>
-            <div class="coloumn">
-              <div class="card">
-                <a href=""><img src="foto/comingsoon.jpg" alt="project5" /></a>
-                <p>Project 5</p>
-              </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img src="foto/comingsoon.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Comming soon</h5>
+              <p class="card-text">Available soon.</p>
+              <a href="#" class="btn btn-primary disabled" target="_blank"
+                >SEE WEBSITE</a
+              >
             </div>
-            <div class="coloumn">
-              <div class="card">
-                <a href=""><img src="foto/comingsoon.jpg" alt="project6" /></a>
-                <p>Project 6</p>
-              </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img src="foto/comingsoon.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Comming soon</h5>
+              <p class="card-text">Available soon.</p>
+              <a href="#" class="btn btn-primary disabled" target="_blank"
+                >SEE WEBSITE</a
+              >
             </div>
           </div>
         </div>
-      </article>
-      <!--Get In Touct-->
-      <div class="getInTouct" id="3">
-        <h1>Contact Me</h1>
-        <h2>Get In Touct</h2>
-        <div class="container">
-          <div class="ct-content">
-            <form action="">
-              <div class="contact-warp">
-                <div class="nama">
-                  <label>Nama</label><br />
-                  <input type="text" />
-                </div>
-                <div class="email">
-                  <label>Email</label><br />
-                  <input type="text" />
-                </div>
+      </div>
+      <!-- portofolio end -->
+
+      <!-- contact -->
+      <div class="container getInTouct" id="contact">
+        <h1 class="text-center ">Contact Me</h1>
+        <h2 class="text-center">Get In Touct</h2>
+        <div class="row" id="card-contact">
+          <div class="col-sm-8">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputNama" />
               </div>
-              <div class="subjec">
-                <label>Subjec</label><br />
-                <input type="text" />
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
               </div>
-              <div class="message">
-                <label>Message</label><br />
-                <textarea></textarea>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Subjec</label>
+                <input type="text" class="form-control" id="inputAddress" />
               </div>
-              <input type="submit" id="btn-submit" value="Send" />
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label" id="inputText">Message</label>
+                <textarea
+                  name=""
+                  id="inputAddress2"
+                  rows="5"
+                  cols="30"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
             </form>
           </div>
-          <aside>
-            <div class="c-email">
-              <img src="foto/email-line.png" alt="email" />
-              <h1>Email</h1>
-              <p>alfianmuhammad34@gmail.com</p>
-            </div>
-            <div class="c-phone">
-              <img src="foto/phone.png" alt="phone" />
-              <h1>Phone</h1>
-              <p>085773113530</p>
-            </div>
-            <div class="c-location">
-              <img src="foto/location.png" alt="location" />
-              <h1>Location</h1>
-              <p>Makasar, East Jakarta City, Jakarta 13650, Indonesia</p>
-            </div>
-          </aside>
+          <div class="col-sm-4">
+            <aside>
+              <div class="c-email">
+                <img src="foto/email-line.png" alt="email" />
+                <h1>Email</h1>
+                <p>alfianmuhammad34@gmail.com</p>
+              </div>
+              <div class="c-phone">
+                <img src="foto/phone.png" alt="phone" />
+                <h1>Phone</h1>
+                <p>085773113530</p>
+              </div>
+              <div class="c-location">
+                <img src="foto/location.png" alt="location" />
+                <h1>Location</h1>
+                <p>Makasar, East Jakarta City, Jakarta 13650, Indonesia</p>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
     </main>
+    <!-- contact end -->
 
+    <!-- footer -->
     <footer>
       <p>Support By: © 2022 Muhamad Alfian Widjaya</p>
     </footer>
+    <!-- footer end -->
 
-    <!-- JS -->
-
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
     <script src="scrip.js"></script>
   </body>
 </html>
