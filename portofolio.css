@@ -430,7 +430,7 @@ footer {
   .home p {
     font-size: 17px;
     line-height: 20px;
-    letter-spacing: normal;
+    letter-spacing: inherit;
   }
 
   .link img {
