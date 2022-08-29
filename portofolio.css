@@ -15,8 +15,8 @@ nav {
 .home {
   display: flex;
   margin: auto;
-  padding: 120px 105px 0 105px;
-  background-color: #04446e;
+  padding: 140px 105px 100px 105px;
+  background-color: rgba(6, 10, 50, 1);
 }
 #profile {
   width: 350px;
@@ -63,9 +63,6 @@ nav {
   padding-right: 0;
 }
 /*education*/
-
-.education {
-}
 .education h1 {
   font-weight: 700;
   font-size: 35px;
@@ -543,6 +540,7 @@ footer {
   }
 
   footer {
+
     margin: 0 5px 0 5px;
     padding: 5px;
     background-color: rgb(7, 33, 88);
