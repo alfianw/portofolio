@@ -1,0 +1,27 @@
+.footer{
+    background-color: black;
+    color: white;
+}
+
+.card-footer{
+    padding: 89px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-footer>h1{
+    font-size: 20px;
+}
+
+@media(max-width: 768px){
+    .card-footer>h1{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 415px){
+    .card-footer>h1{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,127 @@
+.contact{
+    background-color: black;
+    padding: 0 100px 0 100px;
+}
+
+.dess{
+    border-bottom: 1px solid white;
+    color: white;
+    justify-content: end;
+    display: flex;
+    
+}
+
+.card-contact{
+    background-color: rgba(226, 218, 21, 1);
+    height: 394px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 83px 51px 45px;
+    margin-top: 60px;
+}
+
+.warp-contact{
+    margin-top: 60px;
+}
+
+.warp-contact>h1{
+    font-size: 40px;
+}
+
+.email, .phone, .location{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin: 16px;
+}
+
+.icon{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+
+
+article > h2{
+    font-size: 20px;
+    margin: 0;
+}
+
+@media(max-width: 768px){
+    .contact{
+        padding: 0 30px;
+    }
+
+    #contact{
+        width: 160px;
+        height: 160px;
+
+    }
+
+    .warp-contact>h1{
+        font-size: 25px;
+    }
+
+    .warp-contact{
+        margin-top: 10px;
+    }
+    .card-contact{
+        height: 250px;
+        align-items: center;
+        padding: 20px;
+    }
+    .icon{
+        margin-right: 0px;
+        width: 0px;
+        margin-right: 20px;
+    }
+
+    article > h2{
+        font-size:16px;
+    }
+
+    #email, #location{
+        width: 25px;
+    }
+
+    #phone{
+        width: 20px;
+    }
+}
+
+@media(max-width: 415px){
+    .card-contact{
+        flex-direction: column;
+        height: 400px;
+        align-items: center;
+        padding: 5px;
+    }
+
+    article > h2{
+        font-size:9px;
+        text-align: justify;
+    }
+
+    #email, #location{
+        width: 15px;
+    }
+
+    #phone{
+        width: 10px;
+    }
+
+
+    .icon{
+        width: 0px;
+        margin-right: 10px;
+    }
+
+    .contact{
+        background-color: black;
+        padding: 95px 20px 30px 20px;
+    }
+}

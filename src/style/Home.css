@@ -1,0 +1,92 @@
+.home{
+    padding-top: 45px;
+    color: white;
+    background-image: url('../Asset/Background.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.article{
+    margin: 260px 0 0 100px;
+}
+
+.article>p{
+    font-size: 24px;
+}
+
+#name, #work, .article>p{
+    color: rgba(226, 218, 21, 1);
+}
+
+h1{
+    font-size: 32px;
+}
+
+h2{
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+#btn-home{
+    text-decoration: none;
+    color: rgba(226, 218, 21, 1);
+    padding: 0 20px;
+    border-radius: 50px;
+    font-size: 24px;
+    background-color: black;
+    border: 1PX solid rgba(226, 218, 21, 1);
+    transition: 0.5s;
+}
+
+#btn-home:hover{
+    text-decoration: none;
+    color: white;
+    border: 1PX solid white;
+    transition: 0.5s;
+}
+
+@media(max-width: 768px){
+    .article{
+        margin: 0 0 0 30px;
+    }
+
+    .home{
+        display: flex;
+        align-items: center;
+    }
+
+    .article>p{
+        font-size: 20px;
+    }
+    
+    
+    h1{
+        font-size: 26px;
+    }
+    
+    h2{
+        margin-bottom: 50px;
+        font-size: 26px;
+    }
+
+    #btn-home{
+        padding: 0 20px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 415px){
+    .article>p{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    h2{
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+}

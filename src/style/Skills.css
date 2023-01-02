@@ -1,0 +1,106 @@
+.skill{
+    background-color: black;
+    padding-bottom: 95px;
+}
+
+.card-skills{
+    background-image: url('../Asset/bgSkills.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 721px;
+    margin: 0 100px;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.card-skills>h1{
+    font-size: 40px;
+    margin: 71px 0 68px 0;
+}
+
+.warp-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 947px;
+    height: 480px;
+    justify-content: space-around;
+}
+
+@media(max-width: 768px){
+    .skill{
+        padding-bottom: 95px;
+    }
+    
+    .card-skills{
+        height: 721px;
+        border-radius: 30px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+    
+    
+    .warp-skills{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 550px;
+        height: 400px;
+        justify-content: space-around;
+    }
+
+    #html, #css, #js, #react, #bs, #ps{
+        width: 100px;
+        height: 100px;
+    }
+
+    #java, #spring, #figma, #canva{
+        width: 140px;
+        height: 100px;
+    }
+
+    .card-skills{
+        margin: 0 50px;
+        height: 550px;
+    }
+
+    .card-skills>h1{
+        font-size: 35px;
+        margin: 40px 0 40px 0;
+    }
+
+}
+
+@media(max-width: 415px){
+    #html, #css, #js, #react, #bs, #ps{
+        width: 70px;
+        height: 70px;
+    }
+
+    #java, #spring, #figma, #canva{
+        width: 120px;
+        height: 70px;
+    }
+
+    .card-skills{
+        margin: 0 30px;
+        height: 580px;
+    }
+
+    .warp-skills{
+        gap: 20px;
+        width: 300px;
+        height: 400px;
+    }
+
+    .card-skills>h1{
+        font-size: 25px;
+        margin: 40px 0 40px 0;
+    }
+}
