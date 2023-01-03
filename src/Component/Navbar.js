@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import '../style/Navbar.css';
+import 'animate.css';
 
 const Navbar = () => {
 
@@ -11,7 +12,7 @@ const Navbar = () => {
       };
 
     return (
-        <div className='navbar'>
+        <div className='navbar animate__animated animate__fadeInDown'>
             <nav>
                 <h1>Yan</h1>
                 <ul className='navMenu'>
