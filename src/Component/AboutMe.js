@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../style/AboutMe.css';
 import foto from '../Asset/Foto.png';
 import ig from '../Asset/ig.png';
 import linkedin from '../Asset/linkedin.png'
 import github from '../Asset/github.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const AboutMe = ()=>{
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, []);
     return(
         <div className="AboutMe" id="2">
         <div className="card">
-            <img src={foto} alt="" id="foto"/>
-            <div className="warp">
+            <img src={foto} alt="" id="foto" data-aos="fade-right"/>
+            <div className="warp" data-aos="fade-right">
                 <h1>About <span>Me</span></h1>
                 <p>I am a creative person, easy to learn new things and easy to get along with. I have expertise in creating Restful API, processing databases and developing web applications. I am a person who can do well as part of a team and on my own. I am also a hard worker, and eager to learn.</p>
                 <div className="btn-sosmed">

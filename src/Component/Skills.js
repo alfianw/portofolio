@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../style/Skills.css';
 import html from '../Asset/html.png'
 import css from '../Asset/css.png'
@@ -10,23 +10,29 @@ import bootstrap from '../Asset/bootstrap.png'
 import figma from '../Asset/figma.png'
 import canva from '../Asset/canva.png'
 import ps from '../Asset/ps.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Skills = ()=>{
-    return(
+const Skills = () => {
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, []);
+    return (
         <div className="skill" id="3">
             <div className="card-skills">
-                <h1>Skills</h1>
+                <h1 data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom">Skills</h1>
                 <div className="warp-skills">
-                    <img src={html} alt="" id="html"/>
-                    <img src={css} alt="" id="css"/>
-                    <img src={js} alt="" id="js"/>
-                    <img src={java} alt="" id="java"/>
-                    <img src={spring} alt="" id="spring"/>
-                    <img src={react} alt="" id="react"/>
-                    <img src={bootstrap} alt="" id="bs"/>
-                    <img src={figma} alt="" id="figma"/>
-                    <img src={canva} alt="" id="canva"/>
-                    <img src={ps} alt="" id="ps"/>
+                    <img src={html} alt="" id="html" data-aos="flip-left" />
+                    <img src={css} alt="" id="css" data-aos="flip-right" />
+                    <img src={js} alt="" id="js" data-aos="flip-up" />
+                    <img src={java} alt="" id="java" data-aos="flip-down" />
+                    <img src={spring} alt="" id="spring" data-aos="flip-left" />
+                    <img src={react} alt="" id="react" data-aos="flip-right" />
+                    <img src={bootstrap} alt="" id="bs" data-aos="flip-up" />
+                    <img src={figma} alt="" id="figma" data-aos="flip-down" />
+                    <img src={canva} alt="" id="canva" data-aos="flip-left" />
+                    <img src={ps} alt="" id="ps" data-aos="flip-right" />
                 </div>
             </div>
         </div>

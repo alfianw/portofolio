@@ -6,6 +6,7 @@
     background-color: rgba(226, 218, 21, 1);
     align-items: center;
     position: fixed;
+    z-index: 999;
 }
 
 nav{
