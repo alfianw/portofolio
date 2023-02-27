@@ -5,7 +5,7 @@
 }
 .card{
     display: flex;
-    background-color: rgba(15, 14, 14, 1);
+    background-image: linear-gradient(to right,black, #2b2b2c);
     padding: 23px 157px 72px 100px;
 }
 

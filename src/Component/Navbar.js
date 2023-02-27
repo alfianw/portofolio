@@ -8,12 +8,12 @@ const Navbar = () => {
         const navMenu = document.querySelector(".navMenu");
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
-      };
+    };
 
     return (
         <div className='navbar'>
             <nav>
-                <h1>Yan</h1>
+                <h1 id='logo1'>Yan</h1>
                 <ul className='navMenu'>
                     <li className='navItem'><a href="#1">Home</a></li>
                     <li className='navItem'><a href="#3">Skills</a></li>
