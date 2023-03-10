@@ -8,8 +8,8 @@ import spring from '../Asset/spring.png'
 import react from '../Asset/react.png'
 import bootstrap from '../Asset/bootstrap.png'
 import figma from '../Asset/figma.png'
-import canva from '../Asset/canva.png'
-import ps from '../Asset/ps.png'
+import mysql from '../Asset/mysql.png'
+import c from '../Asset/C.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -23,16 +23,16 @@ const Skills = () => {
                 <h1 data-aos="fade-up"
                     data-aos-anchor-placement="center-bottom">Skills</h1>
                 <div className="warp-skills">
-                    <img src={html} alt="" id="html" data-aos="flip-left" />
-                    <img src={css} alt="" id="css" data-aos="flip-right" />
-                    <img src={js} alt="" id="js" data-aos="flip-up" />
-                    <img src={java} alt="" id="java" data-aos="flip-down" />
-                    <img src={spring} alt="" id="spring" data-aos="flip-left" />
-                    <img src={react} alt="" id="react" data-aos="flip-right" />
-                    <img src={bootstrap} alt="" id="bs" data-aos="flip-up" />
-                    <img src={figma} alt="" id="figma" data-aos="flip-down" />
-                    <img src={canva} alt="" id="canva" data-aos="flip-left" />
-                    <img src={ps} alt="" id="ps" data-aos="flip-right" />
+                    <img src={html} alt="" id="kotak" data-aos="flip-left" />
+                    <img src={css} alt="" id="kotak" data-aos="flip-right" />
+                    <img src={js} alt="" id="kotak" data-aos="flip-up" />
+                    <img src={java} alt="" id="pS" data-aos="flip-down" />
+                    <img src={spring} alt="" id="pS" data-aos="flip-left" />
+                    <img src={react} alt="" id="kotak" data-aos="flip-right" />
+                    <img src={bootstrap} alt="" id="kotak" data-aos="flip-up" />
+                    <img src={figma} alt="" id="pS" data-aos="flip-down" />
+                    <img src={mysql} alt="" id="pS" data-aos="flip-left" />
+                    <img src={c} alt="" id="kotak" data-aos="flip-right" />
                 </div>
             </div>
         </div>

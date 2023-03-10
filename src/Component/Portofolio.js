@@ -5,6 +5,7 @@ import bandar from '../Asset/bandarplastik.png'
 import bayduls from '../Asset/bayduls.png'
 import book from '../Asset/book.png'
 import comingsoon from '../Asset/comingsoon.png'
+import movieKuy from '../Asset/movieKuy.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -50,12 +51,12 @@ const Portofolio = () => {
                         <p>Create and design a bookshelf website to store books you want to read or have already read.</p>
                     </div>
                 </a>
-                <a href="blank" target="_blank" data-aos="fade-up"
+                <a href="https://alfianw.github.io/MovieKuy/" target="_blank" data-aos="fade-up"
                     data-aos-duration="3000">
                     <div className="card-porto">
-                        <img src={comingsoon} alt="" id="portoImg" />
-                        <h2>Comming soon</h2>
-                        <p>Available soon.</p>
+                        <img src={movieKuy} alt="" id="portoImg" />
+                        <h2>Movie Kuy!</h2>
+                        <p>Create a Movie Kuy! by using ReactJS by consuming the API from The Movie Data Base. (this website is not responsive yet)</p>
                     </div>
                 </a>
                 <a href="blank" target="_blank" data-aos="fade-up"
