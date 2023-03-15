@@ -56,7 +56,7 @@ const Portofolio = () => {
                     <div className="card-porto">
                         <img src={movieKuy} alt="" id="portoImg" />
                         <h2>Movie Kuy!</h2>
-                        <p>Create a Movie Kuy! by using ReactJS by consuming the API from The Movie Data Base. (this website is not responsive yet)</p>
+                        <p>Create and design a Movie Kuy! by using ReactJS by consuming the API from The Movie Data Base.</p>
                     </div>
                 </a>
                 <a href="blank" target="_blank" data-aos="fade-up"
