@@ -8,65 +8,42 @@ import comingsoon from '../Asset/comingsoon.png'
 import movieKuy from '../Asset/movieKuy.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import CardPorto from "./CardPorto.js";
+import space from "../Asset/space.png"
+import todo from "../Asset/Todo-App.png"
+import urlShortening from "../Asset/url-shortening.png"
+import roomHome from "../Asset/room-homepage.png"
+import emailSubscription from "../Asset/emailSubscriptionPage.png"
+import ecommerce from "../Asset/ecommerce-product-page-main.png"
 
 const Portofolio = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, []);
+
+    const card =[
+        {link: "https://alfianw.github.io/NFTThermos/", img: nft, h2:"NFT Thermos", p:"create the main page of the NFT Thermos website using React JS."},
+        {link: "https://alfianw.github.io/BayDuls/", img: bayduls, h2:"BayDuls", p:"create the main page of the BayDuls website using Bootstrap (this website is not responsive yet)."},
+        {link: "https://alfianw.github.io/MovieKuy/", img: movieKuy, h2:"Movie Kuy!", p:"Create and design a Movie Kuy! by using ReactJS by consuming the API from The Movie Data Base."},
+        {link: "https://alfianw.github.io/SpaceTourism/", img: space, h2:"Space Tourism", p:"Create and design a Space Tourism by using ReactJS (this website is not responsive yet)."},
+        {link: "https://alfianw.github.io/Todo-App/all", img: todo, h2:"Todo App", p:"Create and design a Todo App by using ReactJS"},
+        {link: "https://alfianw.github.io/url-shortening/", img: urlShortening, h2:"Url Shortening", p:"Create and design a Url Shortening by using ReactJS"},
+        {link: "https://alfianw.github.io/room-homepage/", img: roomHome, h2:"Room Home Page", p:"Create and design a Room Home Page by using ReactJS"},
+        {link: "https://alfianw.github.io/emailSubscriptionPage/", img: emailSubscription, h2:"Email Subscription Page", p:"Create and design a Email Subscription Page by using HTML, CSS & JavaScript"},
+        {link: "https://alfianw.github.io/ecommerce-product-page-main/", img: ecommerce, h2:"Ecommerce Product Page", p:"Create and design a Ecommerce Product Page by using HTML, CSS & JavaScript"},
+        {link: "https://alfianw.github.io/bandarplastikindonesia.github.io/", img: bandar, h2:"BANDAR PLASTIK INDONESIA", p:"Create and design a company profile website for the company Bandar Plastik Indonesia"},
+        {link: "https://alfianw.github.io/bookshelf/", img: book, h2:"Bookshelf", p:"Create and design a bookshelf website to store books you want to read or have already read."},
+    ]
+
     return (
         <div className="portofolio" id="4">
             <div className="des">
                 <h1>Portofolio</h1>
             </div>
             <div className="warp-porto">
-                <a href="https://alfianw.github.io/bandarplastikindonesia.github.io/" target="_blank" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div className="card-porto">
-                        <img src={bandar} alt="" id="portoImg" />
-                        <h2>BANDAR PLASTIK INDONESIA</h2>
-                        <p>Create and design a company profile website for the company Bandar Plastik Indonesia</p>
-                    </div>
-                </a>
-                <a href="https://alfianw.github.io/NFTThermos/" target="_blank" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div className="card-porto">
-                        <img src={nft} alt="" id="portoImg" />
-                        <h2>NFT Thermos</h2>
-                        <p>create the main page of the NFT Thermos website using React JS.</p>
-                    </div>
-                </a>
-                <a href="https://alfianw.github.io/BayDuls/" target="_blank" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div className="card-porto">
-                        <img src={bayduls} alt="" id="portoImg" />
-                        <h2>BayDuls</h2>
-                        <p>create the main page of the BayDuls website using Bootstrap. (this website is not responsive yet)</p>
-                    </div>
-                </a>
-                <a href="https://alfianw.github.io/bookshelf/" target="_blank" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div className="card-porto">
-                        <img src={book} alt="" id="portoImg" />
-                        <h2>Bookshelf</h2>
-                        <p>Create and design a bookshelf website to store books you want to read or have already read.</p>
-                    </div>
-                </a>
-                <a href="https://alfianw.github.io/MovieKuy/" target="_blank" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div className="card-porto">
-                        <img src={movieKuy} alt="" id="portoImg" />
-                        <h2>Movie Kuy!</h2>
-                        <p>Create and design a Movie Kuy! by using ReactJS by consuming the API from The Movie Data Base.</p>
-                    </div>
-                </a>
-                <a href="blank" target="_blank" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div className="card-porto">
-                        <img src={comingsoon} alt="" id="portoImg" />
-                        <h2>Comming soon</h2>
-                        <p>Available soon.</p>
-                    </div>
-                </a>
+                <CardPorto
+                card={card}
+                />
             </div>
         </div>
     )

@@ -18,15 +18,25 @@ nav{
 
 }
 
-#btn-contact{
+.btn-contact{
     color:rgba(226, 218, 21, 1);
     background-color: black;
-    padding: 0 10px;
+    padding: 5px 10px;
     border-radius: 50px;
     transition: 0.5s;
+    text-decoration: none;
 }
 
-#btn-contact:hover{
+.btn-contact.active{
+    color:white;
+    background-color: rgb(70, 70, 70);
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.btn-contact:hover{
     color:white;
     transition: 0.5s;
 }
@@ -39,14 +49,18 @@ nav{
     align-items: center;
 }
 
-.navItem> a{
+.navLink{
     text-decoration: none;
     color: black;
     font-size: 20px;
     transition: 0.5s;
 }
 
-.navItem > a:hover{
+.navLink.active{
+    color: white;
+}
+
+.navLink:hover{
     color: white;
     transition: 0.5s;
 }

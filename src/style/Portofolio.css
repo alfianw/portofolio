@@ -1,16 +1,16 @@
-.portofolio{
+.portofolio {
     background-color: black;
     padding: 0 100px;
 
     padding-bottom: 95px;
 }
 
-.des{
+.des {
     border-bottom: 1px solid white;
     color: white;
 }
 
-.warp-porto{
+.warp-porto {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -18,58 +18,101 @@
     margin-top: 49px;
 
 }
-.warp-porto>a{
+
+#linkCardP {
     text-decoration: none;
     color: black;
+    position: relative;
+    width: 356px;
+    height: 350px;
 
 }
 
-.card-porto{
+.card-porto {
     width: 356px;
-    height: 350px;
-    background-image: linear-gradient(to right,rgba(226, 218, 21, 1), #d2d04c);
-    padding: 20px;
+    background-image: linear-gradient(to right, rgba(226, 218, 21, 1), #d2d04c);
+    padding: 20px 20px 0px 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    border-radius: 30px 0 30px 0;
+    border-radius: 30px 0 0px 0px;
+    z-index: 3;
+    position: relative;
+
 }
 
-.card-porto>h2{
+.articleCard{
+    width: 356px;
+    height: 200px;
+    padding: 0px 20px 0px 20px;
+    background-image: linear-gradient(to right, rgba(226, 218, 21, 1), #d2d04c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    transition: 1s;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.articleCard:hover{
+    top: 150px;
+}
+
+.articleCard h2 {
     font-size: 20px;
-    margin: 20px 0 28px 0;
 }
 
-.card-porto>p{
+.articleCard p {
     font-size: 16px;
+    margin: 60px 0px 0px 0px;
+    height: 90px; 
 }
 
-@media(max-width: 768px){
-    .portofolio{
+@media(max-width: 768px) {
+    .portofolio {
         padding: 0 30px;
     }
 
-    .card-porto{
+    .card-porto {
         width: 270px;
-        height: 280px;
+        height: 140px;
     }
 
-    #portoImg{
+    .articleCard p {
+        font-size: 16px;
+        margin: 30px 0px 0px 0px;
+        height: 80px; 
+    }
+
+    #linkCardP {
+        width: 356px;
+        height: 270px;
+    
+    }
+
+    .articleCard{
+        width: 270px;
+        height: 140px;
+    }
+
+    #portoImg {
         width: 100%;
     }
 
-    .card-porto>h2{
+    .card-porto>h2 {
         font-size: 18px;
     }
-    
-    .card-porto>p{
+
+    .articleCard p {
         font-size: 14px;
     }
-    .warp-porto{
+
+    .warp-porto {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    
+
     }
 }
