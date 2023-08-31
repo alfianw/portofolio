@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/portofolio/static/css/main.d7f715d8.css",
-    "main.js": "/portofolio/static/js/main.d12aa4c9.js",
+    "main.css": "/portofolio/static/css/main.aa59a208.css",
+    "main.js": "/portofolio/static/js/main.30336ae4.js",
     "static/media/bgSkills.png": "/portofolio/static/media/bgSkills.1574dc692045a39379dc.png",
     "static/media/Background.png": "/portofolio/static/media/Background.1d662d35af526e5709df.png",
     "static/media/contact.png": "/portofolio/static/media/contact.80139626df46727f1cd1.png",
     "static/media/Foto.png": "/portofolio/static/media/Foto.287dc44f267269036056.png",
     "static/media/bandarplastik.png": "/portofolio/static/media/bandarplastik.c9bbe6c171e7f3c91b04.png",
+    "static/media/room-homepage.png": "/portofolio/static/media/room-homepage.46d315ce3533741bd8c2.png",
+    "static/media/space.png": "/portofolio/static/media/space.a5681a5077edee609da6.png",
     "static/media/nft.png": "/portofolio/static/media/nft.6d0531e9797cc036b179.png",
     "static/media/bayduls.png": "/portofolio/static/media/bayduls.3d6d53b36b1dc77d5c89.png",
+    "static/media/Todo-App.png": "/portofolio/static/media/Todo-App.e476ff9ccd52cbac662d.png",
+    "static/media/ecommerce-product-page-main.png": "/portofolio/static/media/ecommerce-product-page-main.01e3b64407033cd1497a.png",
     "static/media/movieKuy.png": "/portofolio/static/media/movieKuy.ec1c2a6920d9410c6f32.png",
     "static/media/comingsoon.png": "/portofolio/static/media/comingsoon.ad5aef8f055cb0c51100.png",
     "static/media/spring.png": "/portofolio/static/media/spring.d3d38822a4b29902f78d.png",
+    "static/media/url-shortening.png": "/portofolio/static/media/url-shortening.b00b39636d7c698d6bbd.png",
+    "static/media/emailSubscriptionPage.png": "/portofolio/static/media/emailSubscriptionPage.5755f3fb83c9df0de545.png",
     "static/media/mysql.png": "/portofolio/static/media/mysql.8d3a9c6ccad97fd132ee.png",
     "static/media/java.png": "/portofolio/static/media/java.0c32598bf2a4b79f30e2.png",
     "index.html": "/portofolio/index.html",
-    "main.d7f715d8.css.map": "/portofolio/static/css/main.d7f715d8.css.map",
-    "main.d12aa4c9.js.map": "/portofolio/static/js/main.d12aa4c9.js.map"
+    "main.aa59a208.css.map": "/portofolio/static/css/main.aa59a208.css.map",
+    "main.30336ae4.js.map": "/portofolio/static/js/main.30336ae4.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7f715d8.css",
-    "static/js/main.d12aa4c9.js"
+    "static/css/main.aa59a208.css",
+    "static/js/main.30336ae4.js"
   ]
 }
