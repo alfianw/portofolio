@@ -1,0 +1,355 @@
+.about {
+    position: relative;
+    min-height: 360vh;
+    scroll-padding-top: 100vh;
+}
+
+/* =========================
+   PINNED CONTENT
+========================= */
+
+.about-content {
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+
+    padding-top: 120px;
+}
+
+.about-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.about-content-text {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-image {
+    flex: 0 0 220px;
+    max-width: 240px;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 24px;
+    animation: floatSway 4s ease-in-out 1s infinite alternate;
+}
+
+.about-image-left {
+    transform: translateX(-120vw);
+    animation: slideInLeft 1s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 25% cover 40%;
+}
+
+.about-image-right {
+    transform: translateX(120vw);
+    animation: slideInRight 1s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 25% cover 40%;
+}
+
+.about-image-left img {
+    animation-name: floatSwayLeft;
+}
+
+.about-image-right img {
+    animation-name: floatSwayRight;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-120vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(120vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatSwayLeft {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-5deg);
+    }
+
+    25% {
+        transform: translateX(-10px) translateY(6px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateX(-18px) translateY(12px) rotate(-2deg);
+    }
+
+    75% {
+        transform: translateX(-10px) translateY(8px) rotate(4deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(-5deg);
+    }
+}
+
+@keyframes floatSwayRight {
+    0% {
+        transform: translateX(0) translateY(0) rotate(5deg);
+    }
+
+    25% {
+        transform: translateX(10px) translateY(6px) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateX(18px) translateY(12px) rotate(2deg);
+    }
+
+    75% {
+        transform: translateX(10px) translateY(8px) rotate(-4deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(5deg);
+    }
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.about-title {
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: #000;
+
+    opacity: 0;
+    transform: translateY(80px);
+
+    will-change: transform, opacity;
+
+    animation: fadeUp 1s ease forwards;
+    animation-timeline: view();
+
+    animation-range: entry 40% cover 55%;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.about-content p {
+    max-width: 700px;
+    padding: 0 20px;
+
+    font-size: 18px;
+    line-height: 1.9;
+    color: #000;
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(80px);
+
+    will-change: transform, opacity;
+
+    animation: fadeUp 1.2s ease forwards;
+    animation-timeline: view();
+
+    animation-range: entry 90% cover 100%;
+}
+
+/* =========================
+   BUFFER
+========================= */
+
+.about-buffer {
+    height: 500vh;
+}
+
+/* =========================
+   PLANE SECTION
+========================= */
+
+.plane-slide-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* =========================
+   PLANE BASE
+========================= */
+
+.plane-slide {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../../assets/plane-slide.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    position: relative;
+}
+
+/* =========================
+   40% BOTTOM SMOOTH GRADIENT (#757d83)
+========================= */
+
+.plane-slide::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 40%;
+
+    background: linear-gradient(to top,
+            #757d83 0%,
+            #757d83 55%,
+            rgba(117, 125, 131, 0.6) 75%,
+            rgba(117, 125, 131, 0) 100%);
+
+    pointer-events: none;
+}
+
+/* optional soft transition line */
+.plane-slide::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+
+    width: 100%;
+    height: 12%;
+    pointer-events: none;
+}
+
+@media (max-width: 980px) {
+    .about {
+        min-height: auto;
+    }
+
+    .about-inner {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .about-content {
+        position: static;
+        height: auto;
+        padding-top: 60px;
+    }
+
+    .about-image {
+        flex: 0 0 auto;
+        max-width: 280px;
+        width: 70%;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .about-image-left,
+    .about-image-right {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .about-title {
+        font-size: 3rem;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        max-width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .about-buffer {
+        height: auto;
+    }
+
+    .about-image img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-inner {
+        padding: 0 12px;
+    }
+
+    .about-title {
+        font-size: 2.4rem;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .plane-slide-wrapper,
+    .plane-slide {
+        height: 70vh;
+    }
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
