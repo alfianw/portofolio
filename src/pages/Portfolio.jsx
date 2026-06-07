@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../style/componentStyle/portfolio.css";
 import nftImage from "../assets/nft.png";
 import baydulsImage from "../assets/bayduls.png";
@@ -71,10 +71,28 @@ const portfolioProjects = [
 ];
 
 const Portfolio = () => {
+    const [isMobile, setIsMobile] = useState(false);
     const sectionRef = useRef(null);
     const cardsRef = useRef([]);
 
     useEffect(() => {
+        const updateMobile = () => setIsMobile(window.innerWidth <= 980);
+        updateMobile();
+        window.addEventListener("resize", updateMobile);
+        return () => window.removeEventListener("resize", updateMobile);
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) {
+            cardsRef.current.forEach((card) => {
+                if (!card) return;
+                card.style.transform = "none";
+                card.style.zIndex = "auto";
+                card.style.opacity = 1;
+            });
+            return;
+        }
+
         const wrapper = document.querySelector(".wrapper");
 
         if (!wrapper || !sectionRef.current) return;
@@ -118,44 +136,17 @@ const Portfolio = () => {
 
                     const end = start + step;
 
-                    /**
-                     * RIGHT STACK
-                     */
-
                     const rightStackX = 420;
-
                     const rightStackY =
                         40 + (totalCards - index) * 6;
-
-                    /**
-                     * CENTER
-                     */
-
                     const centerX = 0;
-
-                    /**
-                     * LEFT STACK
-                     */
-
                     const leftStackX = -420;
-
-                    /**
-                     * LEFT STACK ORDER
-                     */
-
                     const finishedIndex = index;
-
                     const leftStackY =
                         40 + finishedIndex * 6;
 
                     let x = rightStackX;
-
                     let y = rightStackY;
-
-                    /**
-                     * PHASE 1
-                     * RIGHT -> CENTER
-                     */
 
                     if (
                         progress >= start &&
@@ -176,14 +167,7 @@ const Portfolio = () => {
                             -20,
                             p
                         );
-                    }
-
-                    /**
-                     * PHASE 2
-                     * CENTER -> LEFT
-                     */
-
-                    else if (
+                    } else if (
                         progress > middle &&
                         progress <= end
                     ) {
@@ -202,21 +186,10 @@ const Portfolio = () => {
                             leftStackY,
                             p
                         );
-                    }
-
-                    /**
-                     * FINISHED
-                     */
-
-                    else if (progress > end) {
+                    } else if (progress > end) {
                         x = leftStackX;
-
                         y = leftStackY;
                     }
-
-                    /**
-                     * Z INDEX
-                     */
 
                     let zIndex =
                         totalCards - index;
@@ -232,10 +205,6 @@ const Portfolio = () => {
                         zIndex = finishedIndex;
                     }
 
-                    /**
-                     * ACTIVE CARD
-                     */
-
                     const isActive =
                         progress >= start &&
                         progress <= end;
@@ -249,10 +218,6 @@ const Portfolio = () => {
                             "active-card"
                         );
                     }
-
-                    /**
-                     * TRANSFORM
-                     */
 
                     const transformValue = `
                         translate(${x}px, ${y}px)
@@ -269,7 +234,6 @@ const Portfolio = () => {
                     );
 
                     card.style.zIndex = zIndex;
-
                     card.style.opacity = 1;
                 });
 
@@ -293,7 +257,7 @@ const Portfolio = () => {
                 handleScroll
             );
         };
-    }, []);
+    }, [isMobile]);
 
     const sectionHeight = 100 + portfolioProjects.length * 50;
 

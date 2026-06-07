@@ -18,13 +18,19 @@ const Navbar = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+const getScrollContainer = () => {
+    const wrapper = document.querySelector('.wrapper');
+    return wrapper && wrapper.scrollHeight > wrapper.clientHeight ? wrapper : window;
+};
+
 const scrollToSection = (target) => {
     const wrapper = document.querySelector('.wrapper');
+    const scrollContainer = getScrollContainer();
     const isMobile = window.innerWidth <= 980;
 
     if (target === 'home') {
-        if (wrapper && wrapper.scrollHeight > wrapper.clientHeight) {
-            wrapper.scrollTo({ top: 0, behavior: 'smooth' });
+        if (scrollContainer !== window) {
+            scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -34,24 +40,24 @@ const scrollToSection = (target) => {
     const element = document.getElementById(target);
     if (!element) return;
 
-    if (isMobile && wrapper) {
+    if (isMobile && scrollContainer !== window) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
     }
 
-    const useWrapper = wrapper && wrapper.scrollHeight > wrapper.clientHeight;
+    const useWrapper = scrollContainer !== window;
     const extraOffset = target === 'about' ? element.offsetHeight * 0.25 : 0;
 
     if (useWrapper) {
-        const wrapperRect = wrapper.getBoundingClientRect();
+        const wrapperRect = scrollContainer.getBoundingClientRect();
         const elementRect = element.getBoundingClientRect();
 
         const targetTop =
-            wrapper.scrollTop +
+            scrollContainer.scrollTop +
             (elementRect.top - wrapperRect.top) +
             extraOffset;
 
-        wrapper.scrollTo({
+        scrollContainer.scrollTo({
             top: targetTop,
             behavior: 'smooth'
         });
@@ -93,7 +99,6 @@ const scrollToSection = (target) => {
             return;
         }
 
-        const wrapper = document.querySelector('.wrapper');
         const sections = navItems
             .filter((item) => item.target !== 'home')
             .map((item) => ({
@@ -102,14 +107,18 @@ const scrollToSection = (target) => {
             }))
             .filter((section) => section.el);
 
-        if (!wrapper || !sections.length) {
+        if (!sections.length) {
             return;
         }
 
+        const getContainer = () => getScrollContainer();
+
         const updateObserved = () => {
-            const wrapperRect = wrapper.getBoundingClientRect();
-            const wrapperTop = wrapperRect.top;
-            const wrapperBottom = wrapperRect.bottom;
+            const scrollContainer = getContainer();
+            const wrapper = document.querySelector('.wrapper');
+            const wrapperRect = wrapper ? wrapper.getBoundingClientRect() : null;
+            const wrapperTop = wrapperRect ? wrapperRect.top : 0;
+            const wrapperBottom = wrapperRect ? wrapperRect.bottom : window.innerHeight;
 
             let current = 'home';
             let bestDistance = Infinity;
@@ -124,7 +133,11 @@ const scrollToSection = (target) => {
                 }
             });
 
-            if (wrapper.scrollTop <= 20) {
+            if (scrollContainer !== window && scrollContainer.scrollTop <= 20) {
+                current = 'home';
+            }
+
+            if (scrollContainer === window && window.pageYOffset <= 80) {
                 current = 'home';
             }
 
@@ -136,11 +149,13 @@ const scrollToSection = (target) => {
         };
 
         updateObserved();
-        wrapper.addEventListener('scroll', updateObserved, { passive: true });
+
+        const scrollContainer = getContainer();
+        scrollContainer.addEventListener('scroll', updateObserved, { passive: true });
         window.addEventListener('resize', updateObserved);
 
         return () => {
-            wrapper.removeEventListener('scroll', updateObserved);
+            scrollContainer.removeEventListener('scroll', updateObserved);
             window.removeEventListener('resize', updateObserved);
         };
     }, [location.pathname, manualTarget]);

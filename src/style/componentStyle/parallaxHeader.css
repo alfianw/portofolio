@@ -1,10 +1,11 @@
 .wrapper {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 1px;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .paralax_group {
@@ -140,6 +141,10 @@
     .wrapper {
         perspective: none;
         overflow-x: hidden;
+        overflow-y: visible;
+        min-height: auto;
+        height: auto;
+        scroll-padding-bottom: 140px;
     }
 
     .paralax_group {

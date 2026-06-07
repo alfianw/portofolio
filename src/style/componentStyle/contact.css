@@ -225,18 +225,37 @@
 }
 
 @media (max-width: 960px) {
+    .contact-section {
+        padding: 36px 18px 120px;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-panel,
+    .contact-form-panel {
+        padding: 28px;
     }
 }
 
 @media (max-width: 600px) {
     .contact-section {
-        padding: 30px 16px;
+        padding: 28px 16px 160px;
     }
 
     .contact-panel,
     .contact-form-panel {
-        padding: 24px;
+        padding: 22px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px 16px;
+    }
+
+    .submit-button {
+        width: 100%;
     }
 }

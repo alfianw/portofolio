@@ -36,6 +36,10 @@ const Contact = () => {
   const [status, setStatus] = useState("");
   const [toast, setToast] = useState({ visible: false, message: "", type: "success" });
 
+  const handleFieldFocus = (event) => {
+    event.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -114,6 +118,7 @@ const Contact = () => {
                   name="name"
                   placeholder="Your Name"
                   required
+                  onFocus={handleFieldFocus}
                 />
               </div>
             </div>
@@ -127,6 +132,7 @@ const Contact = () => {
                   name="email"
                   placeholder="Your Email"
                   required
+                  onFocus={handleFieldFocus}
                 />
               </div>
             </div>
@@ -139,6 +145,7 @@ const Contact = () => {
                 placeholder="Your Message"
                 rows="8"
                 required
+                onFocus={handleFieldFocus}
               />
             </div>
 
