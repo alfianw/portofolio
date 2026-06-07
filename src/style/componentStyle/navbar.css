@@ -1,0 +1,221 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    z-index: 10003;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.navbar p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hamburger-button {
+    display: none;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 10004;
+}
+
+.hamburger-button span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 4px 0;
+    background: #111;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-button.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-button.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.container_button {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-backdrop {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .container_button {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px 20px 24px;
+        gap: 16px;
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 10002;
+    }
+
+    .container_button.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hamburger-button {
+        display: block;
+    }
+
+    .navbar p {
+        font-size: 20px;
+    }
+
+    .container_button a,
+    .container_button button {
+        width: 100%;
+        font-size: 18px;
+        justify-content: flex-start;
+        padding: 14px 18px;
+        border-radius: 14px;
+    }
+
+    .nav-link-button.active {
+        box-shadow: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar-backdrop {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.24);
+        z-index: 10001;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 16px 16px;
+    }
+
+    .navbar p {
+        font-size: 18px;
+    }
+}
+
+.container_button a,
+.container_button button {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    border-bottom: 2px solid transparent;
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.container_button a:hover,
+.container_button button:hover {
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 235, 59, 0.18);
+    transform: translateY(-1px);
+}
+
+.nav-link-button.active {
+    font-weight: 700;
+    color: #111;
+    background-color: #ffeb3b;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(255, 235, 59, 0.35);
+    border-bottom-color: transparent;
+}
+
+.nav-link-button.active:hover {
+    background-color: #f5d600;
+}
+
+.login-button {
+    background: yellow;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font: inherit;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 1s;
+
+}
+
+.login-button:hover {
+    transition: 1s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 120px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;  
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
